@@ -14,7 +14,12 @@ app.use(express.json())
 app.use(cors())
 
 // Routes
-app.use(require('./router/route'))
+app.use(cors({
+  origin: 'https://notes-app-virid-three.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
 
 // Start server
 app.listen(PORT, () => {

@@ -22,7 +22,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       await registerWithEmailAndPassword(email, password);
-      navigate('/home')
+      navigate('/login')
       toast.success('Registered success')
     } catch (error) {
       setErrorMessage( error.message);    
